@@ -19,12 +19,12 @@ import './global.scss';
 const history = createBrowserHistory();
 const sagaMiddleware = createSagaMiddleware();
 const routeMiddleware = routerMiddleware(history);
-const middlewares = [thunk, routeMiddleware];
+const middlewares = [thunk, sagaMiddleware, routeMiddleware];
 if (process.env.NODE_ENV === 'development' && true) {
 	middlewares.push(logger);
 }
 const store = createStore(reducers(history), compose(applyMiddleware(...middlewares)));
-// sagaMiddleware.run(sagas);
+sagaMiddleware.run(sagas);
 
 ReactDOM.render(
 	<Provider store={store}>
