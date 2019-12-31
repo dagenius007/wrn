@@ -16,6 +16,12 @@ const loadable = loader =>
 
 const routes = [
 	//New Routes
+
+	{
+		path: '/home',
+		component: loadable(() => import('new-pages/home/home')),
+		exact: true
+	},
 	{
 		path: '/user/signup',
 		component: loadable(() => import('new-pages/auth/signup')),

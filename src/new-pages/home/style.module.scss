@@ -1,0 +1,149 @@
+.carousel {
+	height: 300px;
+	margin-bottom: 20px;
+	&__container {
+		height: 300px;
+	}
+	&__child {
+		height: 300px;
+		position: relative;
+		&:after {
+			content: '';
+			opacity: 0.2;
+			background-color: black;
+			height: 100%;
+			width: 100%;
+			top: 0;
+			left: 0;
+			z-index: 1;
+			position: absolute;
+		}
+		img {
+			height: 300px;
+			object-fit: cover;
+			width: 100%;
+		}
+		p {
+			color: white;
+			font-weight: 500;
+			z-index: 2;
+			position: absolute;
+			top: 50%;
+			right: 50%;
+			transform: translate(50%, -50%);
+			text-align: center;
+			font-size: 25px;
+			width: 80%;
+			text-transform: uppercase;
+		}
+	}
+}
+
+.blog {
+	// border: 1px solid red;
+	background-color: white;
+
+	&__header {
+		color: black;
+		font-size: 1.2rem;
+		text-transform: uppercase;
+		font-weight: 600;
+		padding: 10px;
+	}
+	&__title {
+		color: #337d18;
+		font-size: 1.2rem;
+		margin-bottom: 15px;
+	}
+	&__posts {
+		padding: 10px;
+	}
+	&__post_img {
+		object-fit: cover;
+		height: 200px;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		position: relative;
+		& > p {
+			z-index: 2;
+			color: white;
+			width: 80%;
+			text-align: center;
+		}
+		&:before {
+			content: '';
+			opacity: 0.4;
+			background-color: black;
+			height: 100%;
+			width: 100%;
+			top: 0;
+			left: 0;
+			z-index: 1;
+			position: absolute;
+		}
+	}
+	&__post {
+		border-bottom: 1px solid #999999;
+		padding: 10px 5px;
+		&:last-child {
+			border: 0;
+		}
+	}
+	&__footer {
+		color: #999999;
+	}
+}
+.search_box {
+	margin: 50px 0;
+	input {
+		padding: 15px;
+		height: unset;
+	}
+}
+.judgement {
+	background-color: white;
+	margin-bottom: 20px;
+	padding: 15px;
+	&__title {
+		border-bottom: 2px solid #267509;
+		padding: 10px 0;
+		font-size: 16px;
+		margin-bottom: 20px;
+		color: #337d18;
+	}
+}
+
+.testimonails {
+	height: 200px;
+	background: white;
+	display: grid;
+	justify-content: center;
+	align-items: center;
+	padding: 15px;
+}
+
+.testimonail {
+	text-align: center;
+	position: relative;
+	&__name {
+		color: black;
+		font-size: 1.2rem;
+		margin-bottom: 25px;
+	}
+	&__quotes {
+		p:nth-child(1) {
+			position: absolute;
+			left: 0;
+		}
+		p:nth-child(2) {
+			position: absolute;
+			right: 0;
+			bottom: 0;
+		}
+	}
+	&__content {
+		font-size: 16px;
+		margin-bottom: 10px;
+	}
+}
