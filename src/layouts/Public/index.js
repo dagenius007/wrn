@@ -2,6 +2,7 @@ import React from 'react';
 import { Layout, Row, Col, Icon, Input } from 'antd';
 import logo from 'assets/images/logo.png';
 import { withRouter } from 'react-router-dom';
+import Footer from './Footer';
 
 const { Header } = Layout;
 const { Search } = Input;
@@ -100,59 +101,7 @@ class PublicLayout extends React.PureComponent {
 				</div>
 
 				{/* Footer */}
-				<div className="footer">
-					<footer className="container">
-						<Row gutter={40}>
-							<Col className="gutter-row" xs={{ span: 24 }} lg={{ span: 8 }}>
-								<p className="footer__title">About WRN</p>
-								<p className="footer__content">
-									Weekly Reports of Nigeria is a collection of Weekly Law reports by Legaltext
-									Publishing Company Limited. The reports are now being digitized to ensure that we
-									serve our customers the very best.
-								</p>
-							</Col>
-							<Col className="gutter-row" xs={{ span: 24 }} lg={{ span: 8 }}>
-								<p className="footer__title">Company</p>
-								<ul className="footer__list">
-									<li>Company Overview</li>
-									<li> Meet The Team</li> <li>Our Awesome Partners</li> <li>Our Services</li>
-									<li>Frequently Asked Questions</li> <li>Conatct Us</li>
-									<li>Privacy Policy</li>
-									<li>Student Login</li> <li>Terms of Use Copyright</li>
-								</ul>
-							</Col>
-
-							<Col className="gutter-row" xs={{ span: 24 }} lg={{ span: 8 }}>
-								<p className="footer__title">Contact</p>
-								<div class="footer__contact">
-									<p>
-										<i class="fas fa-map-marker-alt"></i>
-									</p>
-									<p>
-										LegalText Publishing Co. LTD <br />
-										10, Evelyn Owuama Street
-										<br /> River Valley Estate,
-										<br /> Ojodu Berger, Lagos.
-									</p>
-								</div>
-
-								<div class="footer__contact">
-									<p>
-										<i class="fas fa-phone"></i>
-									</p>
-									<p>08034447396, 08033596072</p>
-								</div>
-
-								<div class="footer__contact">
-									<p>
-										<i class="fas fa-envelope"></i>
-									</p>
-									<p>info@weeklyreportsofnigeria.com</p>
-								</div>
-							</Col>
-						</Row>
-					</footer>
-				</div>
+				<Footer />
 			</main>
 		);
 	}
