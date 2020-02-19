@@ -188,10 +188,10 @@ a:focus {
 	transition: 0.25s all ease-in-out;
 }
 .navbar-light .navbar-nav .nav-link {
-	font-size: 15px;
+	font-size: 13px;
 	text-transform: uppercase;
 	color: #2b7339;
-	font-weight: 500;
+	font-weight: 600;
 	text-align: center;
 }
 
@@ -228,11 +228,11 @@ a:focus {
 	padding: 0;
 }
 .navbar-nav {
-	min-width: 70%;
+	min-width: 80%;
 	justify-content: flex-end;
 	align-items: center;
 	& > li:first-child {
-		width: 63%;
+		width: 60%;
 	}
 	@media screen and (max-width: 992px) {
 		& > li {
@@ -240,7 +240,7 @@ a:focus {
 		}
 	}
 	& > li:last-child {
-		width: 36%;
+		width: 40%;
 	}
 }
 
@@ -252,14 +252,20 @@ a:focus {
 	font-size: 27px !important;
 	padding: 15px 18px !important;
 	span {
-		font-size: 15px;
+		font-size: 13px;
 		margin-left: 11px;
 		color: white;
 	}
 }
 
 .navbar-light .navbar-brand {
-	padding: 20px;
+	// padding: 20px;
+	padding-left: 20px;
+	width: 20%;
+	img {
+		height: 100%;
+		width: 100%;
+	}
 }
 @media screen and (max-width: 992px) {
 	.nav-icons,

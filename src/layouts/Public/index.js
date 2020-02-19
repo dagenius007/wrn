@@ -13,70 +13,77 @@ class PublicLayout extends React.PureComponent {
 		const { children } = this.props;
 		return (
 			<main>
-				<div className="nav-container">
+				<div className='nav-container'>
 					{/* <div className="container"> */}
-					<nav class="navbar navbar-expand-lg navbar-light ">
-						<a class="navbar-brand" href="#">
-							<img src={logo} width="30" height="30" alt="" />
+					<nav class='navbar navbar-expand-lg navbar-light '>
+						<a class='navbar-brand' href='/home'>
+							<img src={logo} alt='' />
 						</a>
 						<button
-							class="navbar-toggler"
-							type="button"
-							data-toggle="collapse"
-							data-target="#navbarNavDropdown"
-							aria-controls="navbarNavDropdown"
-							aria-expanded="false"
-							aria-label="Toggle navigation"
+							class='navbar-toggler'
+							type='button'
+							data-toggle='collapse'
+							data-target='#navbarNavDropdown'
+							aria-controls='navbarNavDropdown'
+							aria-expanded='false'
+							aria-label='Toggle navigation'
 						>
-							<span class="navbar-toggler-icon"></span>
+							<span class='navbar-toggler-icon'></span>
 						</button>
-						<div class="collapse navbar-collapse" id="navbarNavDropdown">
-							<ul class="navbar-nav">
+						<div class='collapse navbar-collapse' id='navbarNavDropdown'>
+							<ul class='navbar-nav'>
 								<li>
-									<ul className="nav-list">
-										<li class="nav-item active">
-											<a class="nav-link" href="#">
+									<ul className='nav-list'>
+										<li class='nav-item active'>
+											<a class='nav-link' href='#'>
 												Free Trail
 											</a>
 										</li>
-										<li class="nav-item">
-											<a class="nav-link" href="#">
+										<li class='nav-item'>
+											<a class='nav-link' href='#'>
 												Products
 											</a>
 										</li>
-										<li class="nav-item">
-											<a class="nav-link" href="#">
+										<li class='nav-item'>
+											<a class='nav-link' href='#'>
 												Solutions for you
 											</a>
 										</li>
-										<li class="nav-item">
-											<a class="nav-link" href="#">
+										<li class='nav-item'>
+											<a class='nav-link' href='#'>
 												Support
 											</a>
 										</li>
-										<li class="nav-item">
-											<a class="nav-link" href="#">
+										{/* <li class='nav-item'>
+											<a class='nav-link' href='#'>
 												Store
 											</a>
-										</li>
+										</li> */}
 									</ul>
 								</li>
 
 								<li>
-									<ul className="nav-icons">
-										<li class="nav-item">
-											<a class="nav-link" href="#">
-												<Icon type="phone" />
+									<ul className='nav-icons'>
+										<li class='nav-item'>
+											<a class='nav-link' href='#'>
+												<Icon type='phone' />
 											</a>
 										</li>
-										<li class="nav-item">
-											<a class="nav-link" href="#">
-												<Icon type="search" />
+										<li class='nav-item'>
+											<a class='nav-link' href='#'>
+												<Icon type='search' />
 											</a>
 										</li>
-										<li class="nav-item bg-green">
-											<a class="nav-link" href="#">
-												<Icon type="key" style={{ color: 'white' }} />
+										<li class='nav-item bg-green'>
+											<a class='nav-link' href='#'>
+												<Icon
+													type='key'
+													style={{
+														color: 'white',
+													}}
+													width={'0.9em'}
+													height={'0.9em'}
+												/>
 												<span>Product Sign-In</span>
 											</a>
 										</li>
@@ -88,13 +95,13 @@ class PublicLayout extends React.PureComponent {
 					{/* </div> */}
 				</div>
 
-				<div className="box box__lg">
-					<div className="search_box">
+				<div className='box box__lg'>
+					<div className='search_box'>
 						<Search
-							placeholder="input search loading with enterButton"
+							placeholder='input search loading with enterButton'
 							loading={false}
 							enterButton
-							className="search_bar"
+							className='search_bar'
 						/>
 					</div>
 					{children}
