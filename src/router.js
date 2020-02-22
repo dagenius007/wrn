@@ -43,14 +43,13 @@ const routes = [
 		exact: true,
 	},
 	{
-		path: '/user/signup/:userType',
-		component: loadable(() => import('new-pages/auth/SignUp')),
-		exact: true,
-	},
-
-	{
 		path: '/user/login',
 		component: loadable(() => import('new-pages/auth/Login')),
+		exact: true,
+	},
+	{
+		path: '/user/signup/:userType',
+		component: loadable(() => import('new-pages/auth/signup')),
 		exact: true,
 	},
 
