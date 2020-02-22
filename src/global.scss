@@ -244,6 +244,11 @@ a:focus {
 	}
 }
 
+.ant-menu-submenu-active,
+.ant-menu-submenu-title:hover {
+	color: #2b7339 !important;
+}
+
 .nav-item.active {
 	background: #2b7339;
 	padding: 0 12px;

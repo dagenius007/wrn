@@ -11,7 +11,7 @@ import MainLayout from './Main';
 const Layouts = {
 	public: PublicLayout,
 	login: LoginLayout,
-	main: MainLayout
+	main: MainLayout,
 };
 
 @withRouter
@@ -31,7 +31,7 @@ class IndexLayout extends React.PureComponent {
 		const {
 			children,
 			location: { pathname, search },
-			user
+			user,
 		} = this.props;
 
 		// NProgress Management
@@ -47,11 +47,14 @@ class IndexLayout extends React.PureComponent {
 
 		// Layout Rendering
 		const getLayout = () => {
-			if (pathname === '/') {
-				return 'public';
-			}
+			// if (pathname === '/') {
+			// 	return 'public';
+			// }
 			if (/^\/user(?=\/|$)/i.test(pathname)) {
 				return 'login';
+			}
+			if (pathname.includes('/dashboard')) {
+				return 'main';
 			}
 			return 'public';
 		};
@@ -77,7 +80,7 @@ class IndexLayout extends React.PureComponent {
 
 			// redirect to main dashboard when user on login page and authorized
 			if (isLoginLayout && isUserAuthorized) {
-				return <Redirect to="/dashboard/alpha" />;
+				return <Redirect to='/dashboard/alpha' />;
 			}
 			// in other case render previously set layout
 			return <Container>{children}</Container>;
@@ -85,7 +88,7 @@ class IndexLayout extends React.PureComponent {
 
 		return (
 			<Fragment>
-				<Helmet titleTemplate="Clean UI React Pro | %s" title="Weekly Report " />
+				<Helmet titleTemplate='Clean UI React Pro | %s' title='Weekly Report ' />
 				{BootstrappedLayout()}
 			</Fragment>
 		);
