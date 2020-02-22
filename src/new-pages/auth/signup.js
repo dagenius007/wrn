@@ -10,62 +10,62 @@ import { StudentForm } from './SigupForms';
 @Form.create()
 @connect(({ user }) => ({ user }))
 class SignUp extends Component {
-	onSubmit = event => {
-		event.preventDefault();
-		const { form, dispatch } = this.props;
-		form.validateFields((error, values) => {
-			if (!error) {
-				console.log(values);
-				// dispatch({
-				// 	type: 'user/LOGIN',
-				// 	payload: values
-				// });
-			}
-		});
-	};
+    onSubmit = event => {
+        event.preventDefault();
+        const { form, dispatch } = this.props;
+        form.validateFields((error, values) => {
+            if (!error) {
+                console.log(values);
+                // dispatch({
+                // 	type: 'user/LOGIN',
+                // 	payload: values
+                // });
+            }
+        });
+    };
 
-	render() {
-		const {
-			form,
-			user: { loading },
-			match: {
-				params: { userType },
-			},
-		} = this.props;
+    render() {
+        const {
+            form,
+            user: { loading },
+            match: {
+                params: { userType },
+            },
+        } = this.props;
 
-		console.log(userType);
+        console.log(userType);
 
-		return (
-			<div className={styles.width_750}>
-				<div className={styles.formWrapper}>
-					<div className={styles.form}>
-						<StudentForm form={form} loading={loading} />
-					</div>
-					<div className={styles.sidebar}>
-						<p className={styles.sidebarTitle}>Agile Dev Meetup</p>
-						<p className={styles.sidebarSubTitle}>August 2018</p>
-						<div className={styles.sidebarContent}>
-							<p>
-								Lorem Ipsum is simply dummy text of the printing and typesetting
-								industry. Lorem Ipsum has been the industry&#39;s standard dummy
-								text ever since the 1500s.
-							</p>
-							<p>
-								Ipsum has been the industry&#39;s standard dummy text ever since the
-								1500s.
-							</p>
-						</div>
-						<div className={styles.sidebarFooter}>
+        return (
+            <div className={styles.width_750}>
+                <div className={styles.formWrapper}>
+                    <div className={styles.form}>
+                        <StudentForm form={form} loading={loading} />
+                    </div>
+                    <div className={styles.sidebar}>
+                        <p className={styles.sidebarTitle}>Agile Dev Meetup</p>
+                        <p className={styles.sidebarSubTitle}>August 2018</p>
+                        <div className={styles.sidebarContent}>
+                            <p>
+                                Lorem Ipsum is simply dummy text of the printing and typesetting
+                                industry. Lorem Ipsum has been the industry&#39;s standard dummy
+                                text ever since the 1500s.
+                            </p>
+                            <p>
+                                Ipsum has been the industry&#39;s standard dummy text ever since the
+                                1500s.
+                            </p>
+                        </div>
+                        <div className={styles.sidebarFooter}>
 							<span>
 								<i className='icmn-location mr-3' />
 								New York, USA
 							</span>
-						</div>
-					</div>
-				</div>
-			</div>
-		);
-	}
+                        </div>
+                    </div>
+                </div>
+            </div>
+        );
+    }
 }
 
 export default SignUp;
