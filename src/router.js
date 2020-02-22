@@ -44,7 +44,7 @@ const routes = [
 	},
 	{
 		path: '/user/signup/:userType',
-		component: loadable(() => import('new-pages/auth/Signup')),
+		component: loadable(() => import('new-pages/auth/SignUp')),
 		exact: true,
 	},
 
