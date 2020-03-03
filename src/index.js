@@ -11,10 +11,16 @@ import reducers from 'redux/reducers';
 import sagas from 'redux/sagas';
 import Router from 'router';
 import Localization from 'components/LayoutComponents/Localization';
+import ApolloClient from 'apollo-boost';
+import { ApolloProvider } from 'react-apollo';
 import * as serviceWorker from './serviceWorker';
 
 // app styles
 import './global.scss';
+
+const client = new ApolloClient({
+	uri: 'https://wrn-server.herokuapp.com',
+});
 
 const history = createBrowserHistory();
 const sagaMiddleware = createSagaMiddleware();
@@ -27,12 +33,14 @@ const store = createStore(reducers(history), compose(applyMiddleware(...middlewa
 sagaMiddleware.run(sagas);
 
 ReactDOM.render(
-	<Provider store={store}>
-		<Localization>
-			<Router history={history} />
-		</Localization>
-	</Provider>,
-	document.getElementById('root')
+	<ApolloProvider client={client}>
+		<Provider store={store}>
+			<Localization>
+				<Router history={history} />
+			</Localization>
+		</Provider>
+	</ApolloProvider>,
+	document.getElementById('root'),
 );
 
 // serviceWorker.register();

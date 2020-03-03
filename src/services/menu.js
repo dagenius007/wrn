@@ -30,7 +30,16 @@ export async function getLeftMenuData() {
 			divider: true,
 		},
 		{
-			title: 'Law Of The Federation',
+			title: 'Laws Of The Federation',
+			key: 'antComponents',
+			icon: 'icmn icmn-menu',
+			url: '/antd',
+		},
+		{
+			divider: true,
+		},
+		{
+			title: 'Civil Procedure Rules',
 			key: 'antComponents',
 			icon: 'icmn icmn-menu',
 			url: '/antd',

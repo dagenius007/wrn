@@ -63,7 +63,7 @@ class LiveSearch extends React.Component {
           placeholder={formatMessage({ id: 'topBar.typeToSearch' })}
           prefix={<Icon type="search" style={{ color: 'rgba(0,0,0,.25)' }} />}
           style={{ width: 200 }}
-          onFocus={this.showLiveSearch}
+          // onFocus={this.showLiveSearch}
         />
         <div
           className={`${
@@ -85,9 +85,9 @@ class LiveSearch extends React.Component {
                 className={styles.searchInput}
                 value={searchText}
                 onChange={this.changeSearchText}
-                id="livesearchInput"
+                // id="livesearchInput"
                 placeholder="Type to search..."
-                ref={this.handleNode}
+                // ref={this.handleNode}
               />
               <ul className={styles.options}>
                 <li className={`${styles.option} ${styles.optionCheckbox}`}>

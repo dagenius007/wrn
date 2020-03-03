@@ -15,8 +15,6 @@ const loadable = loader =>
 	});
 
 const routes = [
-	//New Routes
-
 	{
 		path: '/home',
 		component: loadable(() => import('new-pages/home/home')),

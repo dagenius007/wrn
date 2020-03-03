@@ -8,11 +8,11 @@ export default ({ setRegister }) => (
 		<Link to='/user/signup/lawyer' className={styles.user_select}>
 			Lawyer
 		</Link>
-		<Link to='/user/signup/student' className={styles.user_select}>
+
+		<Link to='/user/signup/uni' className={styles.user_select}>
 			Student
 		</Link>
-
-		<Link to='/user/signup/student' className={styles.user_select}>
+		<Link to='/user/signup/lawschool' className={styles.user_select}>
 			Student
 		</Link>
 	</>
