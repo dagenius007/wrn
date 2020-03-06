@@ -5,37 +5,12 @@ import { Helmet } from 'react-helmet';
 import { Link } from 'react-router-dom';
 import { connect } from 'react-redux';
 import logo from 'assets/images/logo.png';
-import gql from 'graphql-tag';
+
 import styles from './style.module.scss';
 import LawyerForm from './LawyerForm';
+import { SIGN_UP_MUTATION } from 'grapqlSchema/auth';
 
 const SignUp = ({ match, form }) => {
-	const SIGN_UP_MUTATION = gql`
-		mutation register(
-			$first_name: String!
-			$last_name: String!
-			$email: String!
-			$role: Int!
-			$user_name: String
-			$password: String!
-			$picture_url: String
-		) {
-			register(
-				first_name: $first_name
-				last_name: $last_name
-				email: $email
-				role: $role
-				user_name: $user_name
-				password: $password
-				picture_url: $picture_url
-			) {
-				ok
-				message
-				status
-			}
-		}
-	`;
-
 	const [signUp, { data }] = useMutation(SIGN_UP_MUTATION);
 	const [loading, setLoading] = useState(false);
 	const [error, setError] = useState('');
@@ -48,7 +23,7 @@ const SignUp = ({ match, form }) => {
 				setLoading(true);
 				try {
 					await signUp({ variables: { ...values, role: 2 } });
-					window.location.href = '/user/login';
+					// window.location.href = '/user/login';
 				} catch (err) {
 					setError('Oops something went wrong');
 				}

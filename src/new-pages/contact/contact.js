@@ -6,7 +6,7 @@ import { Link } from 'react-router-dom';
 import bg1 from 'assets/images/bg1.jpg';
 import bg2 from 'assets/images/bg2.jpg';
 
-Geocode.setApiKey('AIzaSyCf2OLqZn7llqNbi7Ok4UZ3mEwmKArXsQ0');
+// Geocode.setApiKey('AIzaSyCf2OLqZn7llqNbi7Ok4UZ3mEwmKArXsQ0');
 
 class Contact extends React.Component {
 	render() {

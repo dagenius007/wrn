@@ -1,0 +1,42 @@
+{
+  "__schema": {
+    "types": [
+      {
+        "kind": "UNION",
+        "name": "me_union",
+        "possibleTypes": [
+          {
+            "name": "T_response"
+          },
+          {
+            "name": "me"
+          }
+        ]
+      },
+      {
+        "kind": "UNION",
+        "name": "institutions_union",
+        "possibleTypes": [
+          {
+            "name": "T_response"
+          },
+          {
+            "name": "_school"
+          }
+        ]
+      },
+      {
+        "kind": "UNION",
+        "name": "judgementList_union",
+        "possibleTypes": [
+          {
+            "name": "T_response"
+          },
+          {
+            "name": "judgements__list"
+          }
+        ]
+      }
+    ]
+  }
+}

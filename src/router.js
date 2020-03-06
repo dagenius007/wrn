@@ -65,6 +65,14 @@ const routes = [
 
 	// Dashboards
 	{
+		path: '/dashboard',
+		component: loadable(() => import('new-pages/dashboard/Dashboard')),
+	},
+	{
+		path: '/dashboard/profile',
+		component: loadable(() => import('new-pages/dashboard/Dashboard')),
+	},
+	{
 		path: '/dashboard/alpha',
 		component: loadable(() => import('pages/dashboard/alpha')),
 	},

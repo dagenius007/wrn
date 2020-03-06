@@ -6,37 +6,27 @@ import { connect } from 'react-redux';
 import logo from 'assets/images/logo.png';
 import styles from './style.module.scss';
 import LoginForm from './LoginForm';
-import gql from 'graphql-tag';
 import { useMutation } from '@apollo/react-hooks';
+import { useStore } from 'context';
+import { LOGIN_MUTATION } from 'grapqlSchema/auth';
 
 const Login = ({ form }) => {
-	const LOGIN_MUTATION = gql`
-		mutation login($user_name: String!, $password: String!) {
-			login(user_name: $user_name, password: $password) {
-				ok
-				message
-				status
-			}
-		}
-	`;
-
 	const [login, { data, loading: mutationLoading }] = useMutation(LOGIN_MUTATION);
 	const [loading, setLoading] = useState(false);
 	const [error, setError] = useState('');
 
 	const onSubmit = event => {
 		event.preventDefault();
-		console.log('hello -----');
+		// can you see this in real-time 11:53pm??
 
 		form.validateFields(async (error, values) => {
 			if (!error) {
 				setLoading(true);
 				try {
-					await login({ variables: { ...values } });
-					console.log(data);
-					window.location.href = '/dashboard';
+					const executionData = await login({ variables: { ...values } });
+					console.log(data); // use just execution data... it returrns everything pro
 				} catch (err) {
-					setError('Oops something went wrong');
+					setError('Oops something went wrong'); // most likely network errors .. handle them later dont forget
 				}
 				setLoading(false);
 			}

@@ -1,0 +1,7 @@
+# codegen.yml
+schema: 'https://wrn-server.herokuapp.com/'
+overwrite: true
+generates:
+  ./fragmentTypes.json:
+    plugins:
+      - fragment-matcher
