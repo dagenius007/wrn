@@ -31,6 +31,11 @@ const routes = [
 		exact: true,
 	},
 	{
+		path: '/location',
+		component: loadable(() => import('new-pages/location/Location')),
+		exact: true,
+	},
+	{
 		path: '/subscription',
 		component: loadable(() => import('new-pages/subscription/sub')),
 		exact: true,

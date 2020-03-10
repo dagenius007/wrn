@@ -1,12 +1,19 @@
 .about_content {
+	margin-top: 35px;
 	margin-bottom: 25px;
 	h3 {
 		font-size: 1.2rem;
 		margin-bottom: 15px;
-		text-transform: uppercase;
+		text-transform: capitalize;
 		letter-spacing: 1.4;
+		text-align: center;
 	}
-	p{
+	p {
 		letter-spacing: 1.4;
+		width: 80%;
+		margin: 0 auto;
+	}
+	.ant-pagination {
+		display: none !important;
 	}
 }
