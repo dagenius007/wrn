@@ -1,0 +1,84 @@
+{
+  "__schema": {
+    "types": [
+      {
+        "kind": "UNION",
+        "name": "constitution_stucture_union",
+        "possibleTypes": [
+          {
+            "name": "_constitution_stucture"
+          },
+          {
+            "name": "T_response"
+          }
+        ]
+      },
+      {
+        "kind": "UNION",
+        "name": "depth_unions",
+        "possibleTypes": [
+          {
+            "name": "depth_one"
+          },
+          {
+            "name": "depth_two"
+          },
+          {
+            "name": "depth_three"
+          },
+          {
+            "name": "depth_four"
+          }
+        ]
+      },
+      {
+        "kind": "UNION",
+        "name": "me_union",
+        "possibleTypes": [
+          {
+            "name": "T_response"
+          },
+          {
+            "name": "me"
+          }
+        ]
+      },
+      {
+        "kind": "UNION",
+        "name": "institutions_union",
+        "possibleTypes": [
+          {
+            "name": "T_response"
+          },
+          {
+            "name": "_school"
+          }
+        ]
+      },
+      {
+        "kind": "UNION",
+        "name": "judgementList_union",
+        "possibleTypes": [
+          {
+            "name": "T_response"
+          },
+          {
+            "name": "judgements_list"
+          }
+        ]
+      },
+      {
+        "kind": "UNION",
+        "name": "volumes_union",
+        "possibleTypes": [
+          {
+            "name": "T_response"
+          },
+          {
+            "name": "volumes_"
+          }
+        ]
+      }
+    ]
+  }
+}

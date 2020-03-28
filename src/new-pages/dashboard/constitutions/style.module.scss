@@ -1,0 +1,31 @@
+@import "assets/styles/mixins.scss";
+
+.table {
+  & > ul.ant-table-pagination.ant-pagination {
+    display: none !important;
+    border: 1px solid red;
+  }
+
+  th,
+  td:nth-child(1) {
+    background-color: rgba(44, 114, 56, 0.7) !important;
+    font-weight: bold;
+  }
+}
+.bold {
+  font-weight: 700;
+  font-size: 1.2em;
+}
+li {
+  margin-bottom: 10px;
+  font-size: 1em;
+}
+.sub_block {
+  margin-bottom: 35px;
+  h3 {
+    margin-bottom: 25px;
+    &:nth-child(1) {
+      margin-top: 25px;
+    }
+  }
+}

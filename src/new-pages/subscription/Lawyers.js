@@ -136,7 +136,7 @@ const Lawyers = () => {
           className={styles.table}
           pagination={false}
         />
-        <Row gutter={8}>
+        <Row gutter={8} className="mt-40">
           <Col className="gutter-row" xs={{ span: 24 }} lg={{ span: 12 }}>
             <p className={styles.bold}>Benefits</p>
             <ul>
